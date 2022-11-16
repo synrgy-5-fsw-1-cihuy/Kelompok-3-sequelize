@@ -1,7 +1,7 @@
 {
   "development": {
-    "username": "jalil",
-    "password": "jalil123",
+    "username": "emi",
+    "password": "emi",
     "database": "k3_development",
     "host": "127.0.0.1",
     "dialect": "postgres"

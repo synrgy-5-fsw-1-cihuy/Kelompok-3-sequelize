@@ -5,7 +5,7 @@ const authToken = require('./middleware/auth_token');
 const cloudinaryConfig = require('./config/cloudinary');
 const postRouter = require('./router/post.router.js');
 
-const PORT = 8005 || process.env.PORT;
+const PORT = 8001 || process.env.PORT;
 const app = express();
 // Parser 
 // app.use(express.json());

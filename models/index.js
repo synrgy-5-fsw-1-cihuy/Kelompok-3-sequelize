@@ -37,5 +37,6 @@ db.Sequelize = Sequelize;
 
 // Load model in model/index.js
 db.post = require("./post.js")(sequelize, Sequelize);
-db.role = require("./role_user.js")(sequelize, Sequelize);
+db.role_user = require("./role_user.js")(sequelize, Sequelize);
+
 module.exports = db;

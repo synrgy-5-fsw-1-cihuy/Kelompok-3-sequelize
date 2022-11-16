@@ -12,7 +12,7 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
-      permissions: {
+      permission: {
         type: Sequelize.STRING
       },
       createdAt: {

@@ -4,7 +4,8 @@ const formidableMiddleware = require('formidable');
 const { where } = require('sequelize');
 const model = require('../models/index.js');
 const Post = model.post;
-const Role = model.role;
+const Role = model.role_user;
+
 
 // All
 router.get('/api/posts', (request, response) => {
@@ -99,10 +100,7 @@ router.delete('/api/posts/:id', (request, response) => {
     });
 });
 
-
-
-
-// All
+// All Role
 router.get('/api/role', (request, response) => {
     Role.findAll().then(result => {
         response.status(200).json({data: result});
@@ -112,7 +110,7 @@ router.get('/api/role', (request, response) => {
     });
 });
 
-// Get By ID
+// Get By ID Role
 router.get('/api/role/:id', (request, response) => {
     Role.findByPk(request.params.id).then(result => {
         if(result == null) {
@@ -126,7 +124,7 @@ router.get('/api/role/:id', (request, response) => {
     });
 });
 
-// Create
+// Create Role
 router.post('/api/role', (request, response) => {
     const form = formidableMiddleware({ });
 
@@ -146,7 +144,7 @@ router.post('/api/role', (request, response) => {
     });
 });
 
-// Update
+// Update Role
 router.put('/api/role/:id', (request, response) => {
     const form = formidableMiddleware({ });
 
@@ -177,7 +175,7 @@ router.put('/api/role/:id', (request, response) => {
     });
 });
 
-// Delete
+// Delete Role
 router.delete('/api/role/:id', (request, response) => {
     Role.findByPk(request.params.id).then(result => {
         if(result == null) {
